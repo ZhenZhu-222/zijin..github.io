@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchanted Encounters</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+            color: #333;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #d87a7a;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .image-row {
+            display: flex;
+            overflow: hidden;
+            height: 150px;
+            margin-bottom: 20px;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .image-row img {
+            width: 150px;
+            height: 150px;
+            flex-shrink: 0;
+        }
+
+        .scroll-left .image-row-content {
+            animation: scroll-left 20s linear infinite;
+        }
+
+        .scroll-right .image-row-content {
+            animation: scroll-right 20s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes scroll-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        .image-row-content {
+            display: flex;
+        }
+
+        .image-row.scroll-left .image-row-content,
+        .image-row.scroll-right .image-row-content {
+            display: inline-flex;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enchanted Encounters</h1>
+        <p>Discover a world of romance and magic</p>
+    </header>
+
+    <div class="main-content">
+        <div class="image-row scroll-left">
+            <div class="image-row-content">
+                ${Array.from({length: 100}, (_, i) => `<img src="https://via.placeholder.com/150/FFB6C1/FFFFFF?text=Image+${i+1}" alt="Image ${i+1}">`).join('')}
+                ${Array.from({length: 100}, (_, i) => `<img src="https://via.placeholder.com/150/FFB6C1/FFFFFF?text=Image+${i+1}" alt="Image ${i+1}">`).join('')}
+            </div>
+        </div>
+        <div class="image-row scroll-right">
+            <div class="image-row-content">
+                ${Array.from({length: 100}, (_, i) => `<img src="https://via.placeholder.com/150/FFC0CB/FFFFFF?text=Image+${i+1}" alt="Image ${i+1}">`).join('')}
+                ${Array.from({length: 100}, (_, i) => `<img src="https://via.placeholder.com/150/FFC0CB/FFFFFF?text=Image+${i+1}" alt="Image ${i+1}">`).join('')}
+            </div>
+        </div>
+        <div class="image-row scroll-left">
+            <div class="image-row-content">
+                ${Array.from({length: 100}, (_, i) => `<img src="https://via.placeholder.com/150/FF69B4/FFFFFF?text=Image+${i+1}" alt="Image ${i+1}">`).join('')}
+                ${Array.from({length: 100}, (_, i) => `<img src="https://via.placeholder.com/150/FF69B4/FFFFFF?text=Image+${i+1}" alt="Image ${i+1}">`).join('')}
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Enchanted Encounters. All rights reserved.</p>
+    </footer>
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '67626ec66132603bff4421b3' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+</body>
+</html>
